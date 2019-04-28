@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Diseases</h1>
+<ul class="list group">
+  {% for disease in diseases%}
+  <li class="list-group-item"/><a href ="disease/{{disease.id}}">{{disease.title}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
