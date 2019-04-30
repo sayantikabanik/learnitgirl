@@ -3,7 +3,7 @@ from data import Diseases
 
 app=Flask(__name__)
 
-Diseases=Diseases()
+#Diseases=Diseases()
 @app.route('/')
 
 def index():
@@ -15,7 +15,7 @@ def about():
 
 @app.route('/diseases')
 def diseases():
-    return render_template('diseases.html', diseases=Diseases)
+    return render_template('diseases.html', diseases=Diseases())
 
 @app.route('/disease/<string:id>')
 def disease(id):
